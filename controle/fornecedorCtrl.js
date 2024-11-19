@@ -75,7 +75,7 @@ export default class FornecedorCtrl {
             const { cnpj } = requisicao.body;
 
             if (cnpj) {
-                const fornecedor = new Fornecedor(null, null, cnpj);
+                const fornecedor = new Fornecedor(cnpj);
 
                 fornecedor.excluir().then(() => {
                     resposta.status(200).json({

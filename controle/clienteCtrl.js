@@ -76,7 +76,7 @@ export default class ClienteCtrl {
         
             
             if (cpf) {
-                const cliente = new Cliente(null, null, cpf);
+                const cliente = new Cliente(cpf);
 
                 cliente.excluir().then(() => {
                     resposta.status(200).json({

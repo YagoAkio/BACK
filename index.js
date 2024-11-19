@@ -3,6 +3,7 @@ import rotaCategoria from './rotas/rotaCategoria.js';
 import rotaFornecedor from './rotas/rotaFornecedor.js';
 import rotaProduto from './rotas/rotaProduto.js';
 import rotaCliente from './rotas/rotaCliente.js'
+import rotaUsuario from './rotas/rotaUsuario.js';
 
 import cors from 'cors';
 
@@ -18,6 +19,7 @@ app.use('/categoria',rotaCategoria);
 app.use('/produto',rotaProduto);
 app.use('/cliente',rotaCliente);
 app.use('/fornecedor',rotaFornecedor);
+app.use('/usuario',rotaUsuario);
 app.listen(porta,host, ()=>{
     console.log(`API do sistema em execução: ${host}:${porta}`);
 });
