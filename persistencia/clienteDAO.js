@@ -82,7 +82,7 @@ export default class ClienteDAO {
     async excluir(cliente) {
         if (cliente instanceof Cliente) {
             const conexao = await conectar();
-            const sql = `DELETE FROM cliente WHERE cpf = ?`;
+            const sql = `DELETE FROM cliente WHERE cpf LIKE ?`;
             const parametros = [cliente.cpf];
             await conexao.execute(sql, parametros);
             await conexao.release();
